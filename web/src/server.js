@@ -54,7 +54,7 @@ function getRandomInt(max) {
 // app.get('/', (req, res) => {});
 
 // 웹 서버 메인
-const port = 3000;
+const port = 3001;
 app.listen(port, '0.0.0.0', () => {
     console.log(`Application listening on port ${port}`);
 });
