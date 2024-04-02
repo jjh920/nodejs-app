@@ -14,11 +14,11 @@ services:
     - ./db:/docker-entrypoint-initdb.d
 
   postgres_exporter:
-  	image: quay.io/prometheuscommunity/postgres-exporter
-  	ports:
-		- 9187:9187
-	  environment:
-		DATA_SQURCE_NAME: "postgresql://dockeruser:abc123!@localhost:5432/pets?sslmode=disable"
+    image: quay.io/prometheuscommunity/postgres-exporter
+    ports:
+    - 9187:9187
+    environment:
+    DATA_SQURCE_NAME: "postgresql://dockeruser:abc123!@localhost:5432/pets?sslmode=disable"
       
 
   pgadmin:
