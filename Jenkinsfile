@@ -4,12 +4,12 @@ pipeline {
     stages {
         stage('git scm update') {
             steps {
-                git url: 'https://github.com/siestageek/nodejs-app.git', branch: 'main'
+                git url: 'https://github.com/jjh920/nodejs-app.git', branch: 'main'
             }
         }
         stage('docker build & deploy') {
             steps {
-		sh 'IMAGE_NAME=siestageek/nodejsapp docker compose build'
+		sh 'IMAGE_NAME=jjh920/nodejsapp docker compose build'
             }
         }
 	stage('docker hub push') {
