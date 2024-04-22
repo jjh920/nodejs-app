@@ -33,12 +33,13 @@ services:
     - pgadmin-data:/var/lib/pgadmin
 
   web:
-    image: jjh920/webapp
+    image: "${IMAGE_NAME}"
     build: web
     ports:
     - 3001:3001
     environment:
     - DB_HOST=db
+      IMAGE_NAME=jjh920/webapp
     depends_on:
     - db
 
